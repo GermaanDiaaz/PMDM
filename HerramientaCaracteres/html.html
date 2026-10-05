@@ -26,25 +26,28 @@
             margin-right: 2%;
             color: rgb(48, 48, 48);
         }
+        h3{
+            margin-right: 1%;
+        }
     </style>
 </head>
 <body>
 
-    <h1>CharCounter</h1>
-    <h3>Cuenta los caracteres y las palabras</h3>
+    <h1 class="mx-3">CharCounter</h1>
+    <h3 class="mx-3">Cuenta los caracteres y las palabras</h3>
     
-    <div class="caja">
-        <textarea id="textoInput" class="form-control" rows="5">
+    <div class="caja justify-content-center mx-3">
+        <textarea class="texto form-control" rows="5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dignissimos eum voluptatibus adipisci reprehenderit optio natus 
             qui ullam earum ab ipsa provident alias dolorum blanditiis commodi iste, eius ipsam quis.
         </textarea>
     </div>
-    <div class="resultados">
+    <div class="resultados mx-3">
         <h3>Caracteres: </h3>
-        <span class="caracteres"></span>
+        <span class="caracteres fs-4"></span>
 
         <h3>Palabras: </h3>
-        <span class="palabras"></span>
+        <span class="palabras fs-4"></span>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
