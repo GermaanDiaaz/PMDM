@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Palabras</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        h1{
+            color: rgb(0, 180, 180);
+            font-size: 38pt;
+            margin-bottom: 0;
+        }
+        .caja{
+            width: 95%;
+            border: 2px black solid;
+            padding: 1%;
+            margin: 10px auto 10px 0;
+        }
+        .resultados{
+            display: flex;
+        }
+        span{
+            margin-right: 2%;
+            color: rgb(48, 48, 48);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CharCounter</h1>
+    <h3>Cuenta los caracteres y las palabras</h3>
+    
+    <div class="caja">
+        <textarea id="textoInput" class="form-control" rows="5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dignissimos eum voluptatibus adipisci reprehenderit optio natus 
+            qui ullam earum ab ipsa provident alias dolorum blanditiis commodi iste, eius ipsam quis.
+        </textarea>
+    </div>
+    <div class="resultados">
+        <h3>Caracteres: </h3>
+        <span class="caracteres"></span>
+
+        <h3>Palabras: </h3>
+        <span class="palabras"></span>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>
