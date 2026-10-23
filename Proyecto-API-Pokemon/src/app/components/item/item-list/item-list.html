@@ -1,0 +1,9 @@
+<h2 class="mb-4">Sección Objetos</h2>
+
+<div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-3">
+  @for (item of itemList; track item.name) {
+    <div class="col">
+      <app-item-item [item]="item"></app-item-item>
+    </div>
+  }
+</div>

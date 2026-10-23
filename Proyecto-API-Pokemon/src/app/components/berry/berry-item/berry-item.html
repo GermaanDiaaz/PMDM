@@ -1,0 +1,14 @@
+<div class="card h-100 text-center shadow-sm p-2">
+  <img 
+    [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/' + item.name + '-berry.png'" 
+    [alt]="item.name" 
+    class="card-img-top mx-auto"
+    style="width: 48px; height: 48px;"
+  >
+  <div class="card-body p-2">
+    <h6 class="card-title text-capitalize fw-bold">{{ item.name }}</h6>
+    <a [routerLink]="['/berry', berryId]" class="btn btn-sm btn-outline-success w-100 mt-2">
+      Ver Detalle
+    </a>
+  </div>
+</div>

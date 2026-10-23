@@ -1,0 +1,29 @@
+@if (pokemon) {
+  <div class="card mx-auto shadow" style="max-width: 400px;">
+    <img 
+      [src]="pokemon.sprites.front_default" 
+      class="card-img-top mx-auto mt-3" 
+      [alt]="pokemon.name"
+      style="width: 150px; height: 150px;"
+    >
+    <div class="card-body text-center">
+      <h3 class="card-title text-capitalize fw-bold mb-3">{{ pokemon.name }}</h3>
+      
+      <p class="mb-1"><strong>Altura:</strong> {{ pokemon.height / 10 }} m</p>
+      <p class="mb-3"><strong>Peso:</strong> {{ pokemon.weight / 10 }} kg</p>
+
+      <div class="mb-3">
+        <strong>Tipos:</strong>
+        @for (t of pokemon.types; track t.type.name) {
+          <span class="badge bg-primary me-1 text-capitalize">{{ t.type.name }}</span>
+        }
+      </div>
+
+      <a routerLink="/pokemon" class="btn btn-secondary w-100">Volver a la lista</a>
+    </div>
+  </div>
+} @else {
+  <div class="text-center mt-5">
+    <p>Cargando datos del Pokémon...</p>
+  </div>
+}

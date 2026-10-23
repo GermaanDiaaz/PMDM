@@ -1,0 +1,22 @@
+@if (item) {
+  <div class="card mx-auto shadow" style="max-width: 400px;">
+    <img 
+      [src]="item.sprites?.default || 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/' + item.name + '.png'" 
+      class="card-img-top mx-auto mt-3" 
+      [alt]="item.name"
+      style="width: 96px; height: 96px;"
+    >
+    <div class="card-body text-center">
+      <h3 class="card-title text-capitalize fw-bold mb-3">{{ item.name }}</h3>
+      
+      <p class="mb-1"><strong>Categoría:</strong> {{ item.category?.name }}</p>
+      <p class="mb-3"><strong>Precio:</strong> {{ item.cost }} Pokédólares</p>
+
+      <a routerLink="/item" class="btn btn-secondary w-100">Volver a la lista</a>
+    </div>
+  </div>
+} @else {
+  <div class="text-center mt-5">
+    <p>Cargando datos del Objeto...</p>
+  </div>
+}

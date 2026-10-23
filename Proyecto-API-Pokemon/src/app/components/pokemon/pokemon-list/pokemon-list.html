@@ -1,0 +1,15 @@
+<h2 class="mb-4">Sección Pokémon</h2>
+
+@if (pokemonList.length > 0) {
+  <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-3">
+    @for (pokemon of pokemonList; track pokemon.name) {
+      <div class="col">
+        <app-pokemon-item [item]="pokemon"></app-pokemon-item>
+      </div>
+    }
+  </div>
+} @else {
+  <div class="alert alert-info" role="alert">
+    Cargando Pokémon desde la API...
+  </div>
+}

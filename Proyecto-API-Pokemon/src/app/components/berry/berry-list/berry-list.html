@@ -1,0 +1,9 @@
+<h2 class="mb-4">Sección Bayas</h2>
+
+<div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-3">
+  @for (berry of berryList; track berry.name) {
+    <div class="col">
+      <app-berry-item [item]="berry"></app-berry-item>
+    </div>
+  }
+</div>
